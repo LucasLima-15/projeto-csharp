@@ -29,12 +29,19 @@ namespace LojaABC
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            frmMenuPrincipal abrir = new frmMenuPrincipal();
+            abrir.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
