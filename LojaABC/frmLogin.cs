@@ -17,11 +17,6 @@ namespace LojaABC
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -29,19 +24,61 @@ namespace LojaABC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmMenuPrincipal abrir = new frmMenuPrincipal();
-            abrir.Show();
-            this.Hide();
+            string usuario, senha;
+            
+            usuario = txtUsuario.Text;
+            senha = txtSenha.Text;
+
+            if (usuario.Equals("petu") && senha.Equals("pedrolindo"))
+            {
+                frmMenuPrincipal abrir = new frmMenuPrincipal();
+                abrir.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Úsuario e senha inválido", 
+                    "Mensagem do sistema", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error, 
+                    MessageBoxDefaultButton.Button1);
+                LimparCampos();
+
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        
+        public void LimparCampos()
+        {
+            txtUsuario.Clear();
+            txtSenha.Clear();
+            txtUsuario.Focus();
+        }
 
-        private void frmLogin_Load(object sender, EventArgs e)
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtSenha.Focus();
+            }
+        }
+
+        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnEntrar.Focus();
+            }
         }
     }
 }

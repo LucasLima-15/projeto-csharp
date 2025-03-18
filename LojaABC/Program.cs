@@ -13,10 +13,10 @@ namespace LojaABC
         /// </summary>
         [STAThread]
         static void Main()
-        {
+          {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmFuncionarios());
         }
     }
 }
