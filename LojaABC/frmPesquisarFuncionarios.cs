@@ -21,5 +21,12 @@ namespace LojaABC
         {
 
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            frmFuncionarios voltar = new frmFuncionarios();
+            voltar.Show();
+            this.Hide();
+        }
     }
 }

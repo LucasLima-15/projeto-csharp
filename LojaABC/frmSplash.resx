@@ -121,7 +121,7 @@
   <data name="pctLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAA3
-        XQAAN10BGYBGXQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAIbhSURBVHhe7b0H
+        WgAAN1oBS8TgIgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAIbhSURBVHhe7b0H
         fBRnmuc/ntnd2ZvZ3dvbvdu9vd3bu9uZu//t3N7MzqlbYLCNc862bKMqIVW3JBRBIJGFRY4Gk3POOYOJ
         BuecIwYHwMZgA84BB95/Pc3LrCj9WqrurpK6un/fz+f72dkZWpXe53kqvOEnhBBCCCGEEEIIIYQQQggh
         hBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQSGlO6R9H2+f9VeT3+f8tEjL/
@@ -700,6 +700,9 @@
         IYQQQgghhBBCCCGEEOI3P/nJ/w+3i6oPG2wIOAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="tmrSplash.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

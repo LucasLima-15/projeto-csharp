@@ -17,10 +17,21 @@ namespace LojaABC
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void tmrSplash_Tick(object sender, EventArgs e)
         {
+            if (pgbSplash.Value < 100)
+            {
+                pgbSplash.Value = pgbSplash.Value + 10;
+                lblNumero.Text = pgbSplash.Value.ToString() +"%";
 
-
+            }
+            else
+            {
+                frmLogin abrir = new frmLogin();
+                abrir.Show();
+                this.Hide();
+            }
+                
         }
     }
 }

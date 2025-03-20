@@ -31,12 +31,12 @@ namespace LojaABC
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionarios));
             this.gpbDadosPessoais = new System.Windows.Forms.GroupBox();
-            this.Celular = new System.Windows.Forms.MaskedTextBox();
+            this.mskCelular = new System.Windows.Forms.MaskedTextBox();
             this.lblCelular = new System.Windows.Forms.Label();
             this.gpbSexo = new System.Windows.Forms.GroupBox();
             this.rdbMasculino = new System.Windows.Forms.RadioButton();
             this.rdbNaoDesejoInformar = new System.Windows.Forms.RadioButton();
-            this.mskFeminino = new System.Windows.Forms.RadioButton();
+            this.rdbFeminino = new System.Windows.Forms.RadioButton();
             this.dtpDataDeNascimento = new System.Windows.Forms.DateTimePicker();
             this.lblDataDeNascimento = new System.Windows.Forms.Label();
             this.mskCPF = new System.Windows.Forms.MaskedTextBox();
@@ -78,7 +78,7 @@ namespace LojaABC
             // 
             // gpbDadosPessoais
             // 
-            this.gpbDadosPessoais.Controls.Add(this.Celular);
+            this.gpbDadosPessoais.Controls.Add(this.mskCelular);
             this.gpbDadosPessoais.Controls.Add(this.lblCelular);
             this.gpbDadosPessoais.Controls.Add(this.gpbSexo);
             this.gpbDadosPessoais.Controls.Add(this.dtpDataDeNascimento);
@@ -99,14 +99,13 @@ namespace LojaABC
             this.gpbDadosPessoais.TabStop = false;
             this.gpbDadosPessoais.Text = "Dados Pessoais";
             // 
-            // Celular
+            // mskCelular
             // 
-            this.Celular.Location = new System.Drawing.Point(522, 67);
-            this.Celular.Mask = "99999-9999";
-            this.Celular.Name = "Celular";
-            this.Celular.Size = new System.Drawing.Size(94, 26);
-            this.Celular.TabIndex = 6;
-            this.Celular.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
+            this.mskCelular.Location = new System.Drawing.Point(522, 67);
+            this.mskCelular.Mask = "99999-9999";
+            this.mskCelular.Name = "mskCelular";
+            this.mskCelular.Size = new System.Drawing.Size(94, 26);
+            this.mskCelular.TabIndex = 6;
             // 
             // lblCelular
             // 
@@ -116,13 +115,12 @@ namespace LojaABC
             this.lblCelular.Size = new System.Drawing.Size(58, 20);
             this.lblCelular.TabIndex = 16;
             this.lblCelular.Text = "Celular";
-            this.lblCelular.Click += new System.EventHandler(this.label6_Click);
             // 
             // gpbSexo
             // 
             this.gpbSexo.Controls.Add(this.rdbMasculino);
             this.gpbSexo.Controls.Add(this.rdbNaoDesejoInformar);
-            this.gpbSexo.Controls.Add(this.mskFeminino);
+            this.gpbSexo.Controls.Add(this.rdbFeminino);
             this.gpbSexo.Location = new System.Drawing.Point(1, 106);
             this.gpbSexo.Name = "gpbSexo";
             this.gpbSexo.Size = new System.Drawing.Size(200, 100);
@@ -152,16 +150,16 @@ namespace LojaABC
             this.rdbNaoDesejoInformar.Text = "Não desejo informar";
             this.rdbNaoDesejoInformar.UseVisualStyleBackColor = true;
             // 
-            // mskFeminino
+            // rdbFeminino
             // 
-            this.mskFeminino.AutoSize = true;
-            this.mskFeminino.Location = new System.Drawing.Point(23, 46);
-            this.mskFeminino.Name = "mskFeminino";
-            this.mskFeminino.Size = new System.Drawing.Size(92, 24);
-            this.mskFeminino.TabIndex = 9;
-            this.mskFeminino.TabStop = true;
-            this.mskFeminino.Text = "Feminino";
-            this.mskFeminino.UseVisualStyleBackColor = true;
+            this.rdbFeminino.AutoSize = true;
+            this.rdbFeminino.Location = new System.Drawing.Point(23, 46);
+            this.rdbFeminino.Name = "rdbFeminino";
+            this.rdbFeminino.Size = new System.Drawing.Size(92, 24);
+            this.rdbFeminino.TabIndex = 9;
+            this.rdbFeminino.TabStop = true;
+            this.rdbFeminino.Text = "Feminino";
+            this.rdbFeminino.UseVisualStyleBackColor = true;
             // 
             // dtpDataDeNascimento
             // 
@@ -221,7 +219,6 @@ namespace LojaABC
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(223, 26);
             this.txtNome.TabIndex = 2;
-            this.txtNome.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // lblNome
             // 
@@ -289,6 +286,7 @@ namespace LojaABC
             this.btnPesquisar.Text = "Pes&quisar";
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnLimpar
             // 
@@ -301,6 +299,7 @@ namespace LojaABC
             this.btnLimpar.Text = "L&impar";
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnExcluir
             // 
@@ -337,6 +336,7 @@ namespace LojaABC
             this.btnCadastrar.Text = "&Cadastrar";
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnNovo
             // 
@@ -349,6 +349,7 @@ namespace LojaABC
             this.btnNovo.Text = "&Novo";
             this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // gpbEndereco
             // 
@@ -373,7 +374,6 @@ namespace LojaABC
             this.gpbEndereco.TabIndex = 11;
             this.gpbEndereco.TabStop = false;
             this.gpbEndereco.Text = "Endereço";
-            this.gpbEndereco.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // txtEstado
             // 
@@ -382,7 +382,6 @@ namespace LojaABC
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(131, 26);
             this.txtEstado.TabIndex = 16;
-            this.txtEstado.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // lblEstado
             // 
@@ -471,7 +470,6 @@ namespace LojaABC
             this.lblComplemento.Size = new System.Drawing.Size(108, 20);
             this.lblComplemento.TabIndex = 21;
             this.lblComplemento.Text = "Complemento";
-            this.lblComplemento.Click += new System.EventHandler(this.label8_Click);
             // 
             // txtNumero
             // 
@@ -506,7 +504,6 @@ namespace LojaABC
             this.lblCEP.Size = new System.Drawing.Size(41, 20);
             this.lblCEP.TabIndex = 5;
             this.lblCEP.Text = "CEP";
-            this.lblCEP.Click += new System.EventHandler(this.label10_Click);
             // 
             // txtLogradouro
             // 
@@ -564,11 +561,11 @@ namespace LojaABC
         private System.Windows.Forms.DateTimePicker dtpDataDeNascimento;
         private System.Windows.Forms.Label lblDataDeNascimento;
         private System.Windows.Forms.MaskedTextBox mskCPF;
-        private System.Windows.Forms.RadioButton mskFeminino;
+        private System.Windows.Forms.RadioButton rdbFeminino;
         private System.Windows.Forms.RadioButton rdbMasculino;
         private System.Windows.Forms.GroupBox gpbSexo;
         private System.Windows.Forms.RadioButton rdbNaoDesejoInformar;
-        private System.Windows.Forms.MaskedTextBox Celular;
+        private System.Windows.Forms.MaskedTextBox mskCelular;
         private System.Windows.Forms.Label lblCelular;
         private System.Windows.Forms.GroupBox gpbEndereco;
         private System.Windows.Forms.Label lblCEP;
