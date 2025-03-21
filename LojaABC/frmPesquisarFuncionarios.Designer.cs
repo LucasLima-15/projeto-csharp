@@ -33,8 +33,8 @@ namespace LojaABC
             this.gpbPesquisarPor = new System.Windows.Forms.GroupBox();
             this.txtDescrição = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
-            this.rblNome = new System.Windows.Forms.RadioButton();
-            this.rblCodigo = new System.Windows.Forms.RadioButton();
+            this.rdbNome = new System.Windows.Forms.RadioButton();
+            this.rdbCodigo = new System.Windows.Forms.RadioButton();
             this.ltbPesquisar = new System.Windows.Forms.ListBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
@@ -46,8 +46,8 @@ namespace LojaABC
             // 
             this.gpbPesquisarPor.Controls.Add(this.txtDescrição);
             this.gpbPesquisarPor.Controls.Add(this.lblDescricao);
-            this.gpbPesquisarPor.Controls.Add(this.rblNome);
-            this.gpbPesquisarPor.Controls.Add(this.rblCodigo);
+            this.gpbPesquisarPor.Controls.Add(this.rdbNome);
+            this.gpbPesquisarPor.Controls.Add(this.rdbCodigo);
             this.gpbPesquisarPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbPesquisarPor.Location = new System.Drawing.Point(21, 23);
             this.gpbPesquisarPor.Name = "gpbPesquisarPor";
@@ -55,7 +55,6 @@ namespace LojaABC
             this.gpbPesquisarPor.TabIndex = 0;
             this.gpbPesquisarPor.TabStop = false;
             this.gpbPesquisarPor.Text = "Pesquisar por:";
-            this.gpbPesquisarPor.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtDescrição
             // 
@@ -70,30 +69,29 @@ namespace LojaABC
             this.lblDescricao.Location = new System.Drawing.Point(124, 27);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(80, 20);
-            this.lblDescricao.TabIndex = 2;
+            this.lblDescricao.TabIndex = 0;
             this.lblDescricao.Text = "Descrição";
             // 
-            // rblNome
+            // rdbNome
             // 
-            this.rblNome.AutoSize = true;
-            this.rblNome.Location = new System.Drawing.Point(18, 55);
-            this.rblNome.Name = "rblNome";
-            this.rblNome.Size = new System.Drawing.Size(69, 24);
-            this.rblNome.TabIndex = 2;
-            this.rblNome.TabStop = true;
-            this.rblNome.Text = "Nome";
-            this.rblNome.UseVisualStyleBackColor = true;
+            this.rdbNome.AutoSize = true;
+            this.rdbNome.Location = new System.Drawing.Point(18, 55);
+            this.rdbNome.Name = "rdbNome";
+            this.rdbNome.Size = new System.Drawing.Size(69, 24);
+            this.rdbNome.TabIndex = 2;
+            this.rdbNome.Text = "Nome";
+            this.rdbNome.UseVisualStyleBackColor = true;
             // 
-            // rblCodigo
+            // rdbCodigo
             // 
-            this.rblCodigo.AutoSize = true;
-            this.rblCodigo.Location = new System.Drawing.Point(18, 25);
-            this.rblCodigo.Name = "rblCodigo";
-            this.rblCodigo.Size = new System.Drawing.Size(77, 24);
-            this.rblCodigo.TabIndex = 1;
-            this.rblCodigo.TabStop = true;
-            this.rblCodigo.Text = "Código";
-            this.rblCodigo.UseVisualStyleBackColor = true;
+            this.rdbCodigo.AutoSize = true;
+            this.rdbCodigo.Location = new System.Drawing.Point(18, 25);
+            this.rdbCodigo.Name = "rdbCodigo";
+            this.rdbCodigo.Size = new System.Drawing.Size(77, 24);
+            this.rdbCodigo.TabIndex = 1;
+            this.rdbCodigo.TabStop = true;
+            this.rdbCodigo.Text = "Código";
+            this.rdbCodigo.UseVisualStyleBackColor = true;
             // 
             // ltbPesquisar
             // 
@@ -104,6 +102,7 @@ namespace LojaABC
             this.ltbPesquisar.Name = "ltbPesquisar";
             this.ltbPesquisar.Size = new System.Drawing.Size(740, 124);
             this.ltbPesquisar.TabIndex = 4;
+            this.ltbPesquisar.SelectedIndexChanged += new System.EventHandler(this.ltbPesquisar_SelectedIndexChanged);
             // 
             // btnPesquisar
             // 
@@ -132,6 +131,7 @@ namespace LojaABC
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnVoltar
             // 
@@ -175,8 +175,8 @@ namespace LojaABC
         private System.Windows.Forms.GroupBox gpbPesquisarPor;
         private System.Windows.Forms.TextBox txtDescrição;
         private System.Windows.Forms.Label lblDescricao;
-        private System.Windows.Forms.RadioButton rblNome;
-        private System.Windows.Forms.RadioButton rblCodigo;
+        private System.Windows.Forms.RadioButton rdbNome;
+        private System.Windows.Forms.RadioButton rdbCodigo;
         private System.Windows.Forms.ListBox ltbPesquisar;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnLimpar;

@@ -67,7 +67,6 @@ namespace LojaABC
             this.btnVendas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVendas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnVendas.UseVisualStyleBackColor = true;
-            this.btnVendas.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnProdutos
             // 
@@ -94,7 +93,6 @@ namespace LojaABC
             this.btnCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnFornecedores
             // 
@@ -121,7 +119,6 @@ namespace LojaABC
             this.btnRelatorios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRelatorios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnRelatorios.UseVisualStyleBackColor = true;
-            this.btnRelatorios.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnUsuario
             // 
@@ -135,7 +132,6 @@ namespace LojaABC
             this.btnUsuario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnUsuario.UseVisualStyleBackColor = true;
-            this.btnUsuario.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnConfiguracao
             // 
@@ -149,7 +145,6 @@ namespace LojaABC
             this.btnConfiguracao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConfiguracao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnConfiguracao.UseVisualStyleBackColor = true;
-            this.btnConfiguracao.Click += new System.EventHandler(this.button8_Click);
             // 
             // btnVoltar
             // 
