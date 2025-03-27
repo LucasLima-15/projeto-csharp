@@ -92,6 +92,7 @@
             // 
             // txtResultado
             // 
+            this.txtResultado.Enabled = false;
             this.txtResultado.Location = new System.Drawing.Point(29, 193);
             this.txtResultado.Name = "txtResultado";
             this.txtResultado.Size = new System.Drawing.Size(100, 20);
@@ -107,7 +108,7 @@
             this.gbpOperacoes.Location = new System.Drawing.Point(233, 19);
             this.gbpOperacoes.Name = "gbpOperacoes";
             this.gbpOperacoes.Size = new System.Drawing.Size(200, 204);
-            this.gbpOperacoes.TabIndex = 2;
+            this.gbpOperacoes.TabIndex = 0;
             this.gbpOperacoes.TabStop = false;
             this.gbpOperacoes.Text = "Operações";
             this.gbpOperacoes.UseCompatibleTextRendering = true;
@@ -164,7 +165,7 @@
             this.btnCalcular.Location = new System.Drawing.Point(540, 15);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(121, 69);
-            this.btnCalcular.TabIndex = 1;
+            this.btnCalcular.TabIndex = 8;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCalcular.UseVisualStyleBackColor = true;
@@ -178,7 +179,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(540, 90);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(121, 69);
-            this.btnLimpar.TabIndex = 1;
+            this.btnLimpar.TabIndex = 9;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnLimpar.UseVisualStyleBackColor = true;
@@ -192,7 +193,7 @@
             this.btnSair.Location = new System.Drawing.Point(540, 164);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(121, 69);
-            this.btnSair.TabIndex = 1;
+            this.btnSair.TabIndex = 10;
             this.btnSair.Text = "Sair";
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSair.UseVisualStyleBackColor = true;
@@ -213,8 +214,12 @@
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.lblNumero2);
             this.Controls.Add(this.lblNumero1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmCalculadora";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Calculadora";
             this.gbpOperacoes.ResumeLayout(false);
             this.gbpOperacoes.PerformLayout();
             this.ResumeLayout(false);
